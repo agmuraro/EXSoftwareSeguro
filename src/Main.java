@@ -1,17 +1,61 @@
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("Digite o nome da pessoa:");
+        String nomePessoa = scanner.nextLine();
+        System.out.println("Digite a idade da pessoa:");
+        int idadePessoa = scanner.nextInt();
+        scanner.nextLine();
+        Pessoa pessoa = new Pessoa();
+        pessoa.setNome(nomePessoa);
+        pessoa.setIdade(idadePessoa);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+
+        System.out.println("Digite o título da música:");
+        String tituloMusica = scanner.nextLine();
+        System.out.println("Digite a duração da música em segundos:");
+        int duracaoMusica = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Digite o compositor da música:");
+        String compositorMusica = scanner.nextLine();
+        Musica musica = new Musica();
+        musica.setTitulo(tituloMusica);
+        musica.setDuracao(duracaoMusica);
+        musica.setCompositor(compositorMusica);
+
+
+        System.out.println("Digite o gênero do álbum:");
+        String generoAlbum = scanner.nextLine();
+        System.out.println("Digite o ano do álbum:");
+        int anoAlbum = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Digite o nome do álbum:");
+        String nomeAlbum = scanner.nextLine();
+        System.out.println("Digite o nome do artista:");
+        String artistaAlbum = scanner.nextLine();
+        System.out.println("Quantas músicas o álbum possui?");
+        int musicaAlbum = scanner.nextInt();
+        scanner.nextLine();
+        Album album = new Album();
+        album.setGenero(generoAlbum);
+        album.setAno(anoAlbum);
+        album.setNome(nomeAlbum);
+        album.setArtista(artistaAlbum);
+        album.setMusicas(musicaAlbum);
+
+
+
+        System.out.println("Dados do álbum:");
+        album.mostrarTodosOsDados();
+        System.out.println("Dados da música");
+        musica.musicaInfo();
+
+
         }
+
     }
-}
